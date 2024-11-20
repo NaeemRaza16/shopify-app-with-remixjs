@@ -1,0 +1,32 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "c789af9335ecdae2dec3949ca61eb935"
+application_url = "https://nomination-uk-pins-wow.trycloudflare.com"
+embedded = true
+name = "ticket-booking-system"
+handle = "ticket-booking-system"
+
+[webhooks]
+api_version = "2024-10"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://nomination-uk-pins-wow.trycloudflare.com/auth/callback",
+  "https://nomination-uk-pins-wow.trycloudflare.com/auth/shopify/callback",
+  "https://nomination-uk-pins-wow.trycloudflare.com/api/auth/callback"
+]
+
+[pos]
+embedded = false
+
+[build]
+dev_store_url = "naeems-ticket.myshopify.com"
+automatically_update_urls_on_dev = true
