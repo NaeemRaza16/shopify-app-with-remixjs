@@ -15,6 +15,9 @@ datasource db {
 
 model Session {
   id            String    @id
+  inquiry       String    @default("")
+  status        String    @default("pending")
+  date          DateTime? @default(now())
   shop          String
   state         String
   isOnline      Boolean   @default(false)

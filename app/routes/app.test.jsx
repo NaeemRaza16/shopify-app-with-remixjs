@@ -7,7 +7,7 @@ import prisma from "../db.server";
 
 export async function loader() {
   // Fetch all data from the Session model
-  const sessions = await prisma.session?.findMany();
+  const sessions = await prisma.session.findMany();
   // Return the data as JSON
   return json(sessions);
 }
@@ -49,10 +49,10 @@ const Test = () => {
         <ul>
           {sessions.map((session) => (
             <li key={session.id}>
-              <strong>Shop:</strong> {session.shop} <br />
-              <strong>State:</strong> {session.state} <br />
-              <strong>Access Token:</strong> {session.accessToken} <br />
-              <strong>Expires:</strong> {session.expires || "Never"}
+              <strong>Id:</strong> {session.id} <br />
+              <strong>inquiry:</strong> {session.shop} <br />
+              <strong>Status:</strong> {session.state} <br />
+              <strong>Date:</strong> {session.accessToken} <br />
             </li>
           ))}
         </ul>
