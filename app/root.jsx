@@ -7,11 +7,11 @@ import {
 } from "@remix-run/react";
 // import { LinksFunction } from "@remix-run/node"; // or cloudflare/deno
 
-import stylesheet from "./tailwind.css?url";
+// import stylesheet from "./tailwind.css?url";
 
-export const links = () => [
-  { rel: "stylesheet", href: stylesheet },
-];
+// export const links = () => [
+//   { rel: "stylesheet", href: stylesheet },
+// ];
 
 export default function App() {
   return (
@@ -29,7 +29,6 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <h1 className="bg-red-500">Hello World</h1>
         <Outlet />
         <ScrollRestoration />
         <Scripts />
