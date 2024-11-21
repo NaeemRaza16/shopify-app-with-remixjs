@@ -30,7 +30,7 @@ export async function action({ request }) {
     },
   });
 
-  return redirect("/app/sessions");
+  return redirect("/app/tickets");
 }
 
 const SessionsList = () => {
@@ -80,7 +80,7 @@ const SessionsList = () => {
                     <td className="px-6 py-4">{session.state}</td>
                     <td className="px-6 py-4">{session.expires.split("T")[0]}</td>
                     <td className="px-6 py-4">
-                      <Link to={`/app/sessions/${session.id}`}>
+                      <Link to={`/app/tickets/${session.id}`}>
                         Check Details
                       </Link>
                     </td>
@@ -115,7 +115,7 @@ const SessionsList = () => {
           <input type="text" id="state" name="state" required />
         </div>
         {/* Expires will be set automatically */}
-        <button type="submit">Create Session</button>
+        <button type="submit">Create</button>
       </Form>
     </div>
   );
