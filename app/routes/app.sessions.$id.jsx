@@ -27,13 +27,13 @@ const SessionDetail = () => {
         <strong>Id:</strong> {session.id}
       </p>
       <p>
-        <strong>Shop:</strong> {session.shop}
+        <strong>Inquiry:</strong> {session.shop}
       </p>
       <p>
         <strong>Status:</strong> {session.state}
       </p>
       <p>
-        <strong>Expires:</strong> {session.expires}
+        <strong>Date:</strong> {session.expires.split("T")[0]}
       </p>
     </div>
   );

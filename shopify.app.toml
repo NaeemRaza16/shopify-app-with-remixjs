@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "c789af9335ecdae2dec3949ca61eb935"
-application_url = "https://dk-exhaust-clinical-extraordinary.trycloudflare.com"
+application_url = "https://talent-schools-nr-command.trycloudflare.com"
 embedded = true
 name = "ticket-booking-system"
 handle = "ticket-booking-system"
@@ -19,9 +19,9 @@ scopes = "write_products,write_script_tags"
 
 [auth]
 redirect_urls = [
-  "https://dk-exhaust-clinical-extraordinary.trycloudflare.com/auth/callback",
-  "https://dk-exhaust-clinical-extraordinary.trycloudflare.com/auth/shopify/callback",
-  "https://dk-exhaust-clinical-extraordinary.trycloudflare.com/api/auth/callback"
+  "https://talent-schools-nr-command.trycloudflare.com/auth/callback",
+  "https://talent-schools-nr-command.trycloudflare.com/auth/shopify/callback",
+  "https://talent-schools-nr-command.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]
