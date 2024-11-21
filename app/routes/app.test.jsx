@@ -4,6 +4,8 @@ import { Layout } from "@shopify/polaris";
 import React from "react";
 import { authenticate } from "../shopify.server";
 import prisma from "../db.server";
+import { Link } from "@remix-run/react";
+
 
 export async function loader() {
   // Fetch all data from the Session model
@@ -25,6 +27,7 @@ export async function loader() {
 //     email: formData.get("email"),
 //   });
 // }
+
 
 const Test = () => {
   const sessions = useLoaderData();
@@ -49,10 +52,12 @@ const Test = () => {
         <ul>
           {sessions.map((session) => (
             <li key={session.id}>
-              <strong>Id:</strong> {session.id} <br />
-              <strong>inquiry:</strong> {session.shop} <br />
-              <strong>Status:</strong> {session.state} <br />
-              <strong>Date:</strong> {session.accessToken} <br />
+              <Link to={`/sessions/${session.id}`}>
+                <strong>Id:</strong> {session.id} <br />
+                <strong>Shop:</strong> {session.shop} <br />
+                <strong>Status:</strong> {session.state} <br />
+                <strong>Date:</strong> {session.expires} <br />
+              </Link>
             </li>
           ))}
         </ul>
@@ -62,3 +67,4 @@ const Test = () => {
 };
 
 export default Test;
+

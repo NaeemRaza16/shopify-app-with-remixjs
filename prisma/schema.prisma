@@ -15,14 +15,11 @@ datasource db {
 
 model Session {
   id            String    @id
-  inquiry       String    @default("")
-  status        String    @default("pending")
-  date          DateTime? @default(now())
-  shop          String
-  state         String
+  shop          String    @default("")
+  state         String    @default("pending")
   isOnline      Boolean   @default(false)
   scope         String?
-  expires       DateTime?
+  expires       DateTime? @default(now())
   accessToken   String
   userId        BigInt?
   firstName     String?
